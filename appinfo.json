@@ -1,0 +1,9 @@
+{
+		"name": "STATegraEMS ",
+		"short_name": "STATegraEMS",
+		"version": "0.6r1",
+		"description": "STATegraEMS is an Experiment Management System (EMS) for omics experiments that supports different types of sequencing-based assays, proteomics and metabolomics data.",
+		"catalogue_url": "",
+		"application_url": "http://bioinfo.cipf.es/stategraems/",
+		"tags": ["Experiment Management System", "Bioinformatics"]
+}
