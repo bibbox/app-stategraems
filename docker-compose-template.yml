@@ -2,12 +2,10 @@ version: '2'
 services:
 
     §§INSTANCE-stategraems:
-      build: 
-          context: ./images/stategraem
       image: bibbox/stategraems
       container_name: §§INSTANCE-stategraems
       links:
-        - §§INSTANCE-stategraems-mysql:stategraems-db
+        - §§INSTANCE-stategraems-db:stategraems-db
       depends_on:
         - §§INSTANCE-stategraems-db
       volumes_from:
