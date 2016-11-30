@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# SCRIPT TO INSTALL STATEGRAEMMS INSTANCE AT A BIBBOX SERVER
+# SCRIPT TO INSTALL STATEGRAEMS INSTANCE AT A BIBBOX SERVER
 #
 #
 echo "Installing OpenSpecimen BIBBOX Application"
@@ -83,9 +83,9 @@ while [ "$1" != "" ]; do
         -p | --port )           shift
                                 port=$1
                                 ;;
-         --MYSQL_ROOT_PASSWORD)         shift
-                                MYSQL_ROOT_PASSWORD=$1
-                                ;;                    
+         --MYSQL_ROOT_PASSWORD )  shift
+                                  MYSQL_ROOT_PASSWORD=$1
+                                  ;;                    
     esac
     shift
 done
