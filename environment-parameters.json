@@ -1,0 +1,12 @@
+[
+	{
+		"id": "MYSQL_ROOT_PASSWORD",
+		"display_name": "mySQL root password",
+		"description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password",
+		"default_value": "",
+		"type": "PASSWORD",
+		"visible": "YES",
+		"min_length": "1",
+		"max_length": "128"
+	}
+]

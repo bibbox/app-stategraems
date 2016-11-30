@@ -1,0 +1,4 @@
+{
+  runningcontainers:["-stategraems", "-stategraems-db"],
+  supportcontainers:["-phenotips-data"]    
+}
