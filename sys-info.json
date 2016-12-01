@@ -1,4 +1,4 @@
 {
-  runningcontainers:["-stategraems", "-stategraems-db"],
-  supportcontainers:["-phenotips-data"]    
+  runningcontainers:["§§INSTANCE-stategraems", "§§INSTANCE-stategraems-db"],
+  supportcontainers:["§§INSTANCE-phenotips-data"]    
 }
