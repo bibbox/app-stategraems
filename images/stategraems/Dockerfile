@@ -20,10 +20,8 @@ MAINTAINER Rafael Hernandez <rafahd87@gmail.com>
 #Install mysql client for connecting to the mysql component
 
 RUN apt-get update && apt-get install -y mysql-client  \
-    && wget https://github.com/fikipollo/stategraems/archive/feature/angular.zip -O /tmp/ems.zip \
-    && mkdir /tmp/ems/ \
-    && unzip /tmp/ems.zip -d /tmp/ems/ \
-    && cp /tmp/ems/*/dist/stategraems.war /usr/local/tomcat/webapps/  \
+    && wget https://github.com/fikipollo/stategraems/blob/master/dist/stategraems.war
+    && cp stategraems.war /usr/local/tomcat/webapps/  \
     && sleep 10 \
     && rm -r /usr/local/tomcat/webapps/ROOT \
     && ln -s /usr/local/tomcat/webapps/stategraems /usr/local/tomcat/webapps/ROOT  \
