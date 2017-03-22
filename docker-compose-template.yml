@@ -15,7 +15,7 @@ services:
       networks:
         - bibbox-default-network
       depends_on:
-        - §§INSTANCE-stategraems-mysql:       
+        - §§INSTANCE-stategraems-mysql       
       environment:
         - EMS_ADMIN_USER=§§EMS_ADMIN_USER
         - EMS_ADMIN_PASSWORD=§§EMS_ADMIN_PASSWORD
