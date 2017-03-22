@@ -1,32 +1,52 @@
 version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
 services:
 
     §§INSTANCE-stategraems:
       image: bibbox/stategraems
       container_name: §§INSTANCE-stategraems
       links:
-        - §§INSTANCE-stategraems-db:stategraems-db
+        - §§INSTANCE-stategraems-mysql:stategraems-mysql
+      restart: unless-stopped
+      networks:
+        - bibbox-default-network
       depends_on:
-        - §§INSTANCE-stategraems-db
+        - §§INSTANCE-stategraems-db        
+      environment:
+        - EMS_ADMIN_USER=§§EMS_ADMIN_USER
+        - EMS_ADMIN_PASSWORD=§§EMS_ADMIN_PASSWORD
+        - MYSQL_ROOT_USER="root"
+        - MYSQL_ROOT_PASSWORD="thispasswordisonlyinternalinthecontainer"
+        - MYSQL_DATABASE_NAME="STATegraDB"
+        - MYSQL_HOST="stategraems-mysql"
+        - MYSQL_EMS_USER="emsuser"
+        - MYSQL_EMS_PASS="thispasswordisonlyinternalinthecontainer"
       volumes_from:
         - §§INSTANCE-stategraems-data
       ports:
         - "§§PORT:8080"
 
-    §§INSTANCE-stategraems-db:
+    §§INSTANCE-stategraems-mysql:
       image: mysql
-      container_name: §§INSTANCE-stategraems-db
-      environment:
-        - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
-      depends_on:
-        - §§INSTANCE-stategraems-data
+         container_name: §§INSTANCE-stategraems-mysql
+         environment:
+           - MYSQL_ROOT_PASSWORD="thispasswordisonlyinternalinthecontainer"
+         depends_on:
+           - §§INSTANCE-stategraems-data
+      restart: unless-stopped
+      networks:
+        - bibbox-default-network
       volumes_from:
-        - §§INSTANCE-stategraems-data
+           - §§INSTANCE-stategraems-data
 
     §§INSTANCE-stategraems-data:
       image: busybox
       container_name: §§INSTANCE-stategraems-data
       volumes:
-        - §§FOLDER/var/lib/mysql:/var/lib/mysql
-        - §§FOLDER/data:/data
+        - ./var/lib/mysql:/var/lib/mysql
+        - ./data:/data
 

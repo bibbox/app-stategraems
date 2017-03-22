@@ -3,11 +3,14 @@
 # VERSION 0.0.2 
 #
 ############################################################
-# Dockerfile to build Galaxy container images
+# Dockerfile to build Stategra EMS
 # Based on tomcat
 ############################################################
 
 # Set the base image to official Tomcat
+# forked from https://github.com/fikipollo/stategraems-docker/blob/master/Dockerfile
+
+
 FROM tomcat
 
 # File Author / Maintainer

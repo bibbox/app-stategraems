@@ -1,12 +1,22 @@
 [
 	{
-		"id": "MYSQL_ROOT_PASSWORD",
-		"display_name": "mySQL root password",
-		"description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password",
-		"default_value": "",
-		"type": "PASSWORD",
+		"id": "EMS_ADMIN_USER",
+		"display_name": "EMS admin user",
+		"description": "the email for the admin account",
+		"default_value": "emsadminuser@bibbox.org",
+		"type": "text",
 		"visible": "YES",
 		"min_length": "1",
 		"max_length": "128"
-	}
+	},
+	{
+		"id": "EMS_ADMIN_PASSWORD",
+		"display_name": "EMS admin user",
+		"description": "the password for the admin account" ,
+		"default_value": "bibbox4ever",
+		"type": "text",
+		"visible": "YES",
+		"min_length": "1",
+		"max_length": "128"
+	}	
 ]
