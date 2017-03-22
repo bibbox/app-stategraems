@@ -20,7 +20,7 @@ MAINTAINER Rafael Hernandez <rafahd87@gmail.com>
 #Install mysql client for connecting to the mysql component
 
 RUN apt-get update && apt-get install -y mysql-client  \
-    && wget https://github.com/fikipollo/stategraems/blob/master/dist/stategraems.war
+    && wget https://github.com/fikipollo/stategraems/blob/master/dist/stategraems.war \
     && cp stategraems.war /usr/local/tomcat/webapps/  \
     && sleep 10 \
     && rm -r /usr/local/tomcat/webapps/ROOT \
