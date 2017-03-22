@@ -32,10 +32,10 @@ services:
 
     §§INSTANCE-stategraems-mysql:
       image: mysql
-         container_name: §§INSTANCE-stategraems-mysql
-         environment:
+      container_name: §§INSTANCE-stategraems-mysql
+      environment:
            - MYSQL_ROOT_PASSWORD="thispasswordisonlyinternalinthecontainer"
-         depends_on:
+      depends_on:
            - §§INSTANCE-stategraems-data
       restart: unless-stopped
       networks:
