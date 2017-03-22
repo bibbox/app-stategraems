@@ -1,4 +1,4 @@
 {
-  runningcontainers:["§§INSTANCE-stategraems", "§§INSTANCE-stategraems-db"],
+  runningcontainers:["§§INSTANCE-stategraems", "§§INSTANCE-stategraems-mysql"],
   supportcontainers:["§§INSTANCE-stategraems-data"]    
 }
