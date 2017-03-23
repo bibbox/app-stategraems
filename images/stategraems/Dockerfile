@@ -9,10 +9,14 @@
 
 # "forked" from https://github.com/fikipollo/stategraems-docker/blob/master/Dockerfile
 
+FROM tomcat
+
+
 # File Author / Maintainer
+
 MAINTAINER Rafa Hernandez <https://github.com/fikipollo>
 
-FROM tomcat
+
 
 
 ################## BEGIN INSTALLATION ######################
